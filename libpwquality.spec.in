@@ -19,6 +19,7 @@ BuildRequires: gettext
 BuildRequires: pam-devel
 BuildRequires: python2-devel
 BuildRequires: python%{python3_pkgversion}-devel
+BuildRequires: automake autoconf libtool gettext-devel
 
 URL: http://libpwquality.fedorahosted.org/
 
@@ -67,6 +68,7 @@ pronounceable passwords from Python applications.
 %prep
 %setup -q
 
+./autogen.sh
 rm -rf %{py3dir}
 cp -a . %{py3dir}
 
