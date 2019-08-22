@@ -18,7 +18,7 @@ BuildRequires: cracklib-devel
 BuildRequires: gettext
 BuildRequires: pam-devel
 BuildRequires: python2-devel
-BuildRequires: python3-devel
+BuildRequires: python%{python3_pkgversion}-devel
 
 URL: http://libpwquality.fedorahosted.org/
 
@@ -53,12 +53,12 @@ for the libpwquality library. These bindings can be used
 for easy password quality checking and generation of random
 pronounceable passwords from Python applications.
 
-%package -n python3-pwquality
+%package -n python%{python3_pkgversion}-pwquality
 Group: Development/Libraries
 Summary: Python bindings for the libpwquality library
 Requires: libpwquality%{?_isa} = %{version}-%{release}
 
-%description -n python3-pwquality
+%description -n python%{python3_pkgversion}-pwquality
 This is pwquality Python module that provides Python bindings
 for the libpwquality library. These bindings can be used
 for easy password quality checking and generation of random
@@ -143,7 +143,7 @@ mkdir $RPM_BUILD_ROOT%{_secconfdir}/pwquality.conf.d
 %{python_sitearch}/pwquality.so
 %{python_sitearch}/*.egg-info
 
-%files -n python3-pwquality
+%files -n python%{python3_pkgversion}-pwquality
 %defattr(-,root,root,-)
 %{python3_sitearch}/*.so
 %{python3_sitearch}/*.egg-info
