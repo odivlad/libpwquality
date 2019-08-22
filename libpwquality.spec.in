@@ -12,7 +12,7 @@ Source0: http://fedorahosted.org/releases/l/i/libpwquality/libpwquality-%{versio
 %global _moduledir %{_libdir}/security
 %global _secconfdir %{_sysconfdir}/security
 
-Recommends: cracklib-dicts >= 2.8
+Requires: cracklib-dicts >= 2.8
 Requires: pam%{?_isa}
 BuildRequires: cracklib-devel
 BuildRequires: gettext
